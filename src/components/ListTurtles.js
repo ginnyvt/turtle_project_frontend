@@ -13,6 +13,7 @@ function ListTurtle() {
     axios
       .get('http://localhost:5000/turtles')
       .then((res) => {
+        console.log(res);
         if (res.data.length > 0) {
           setTurtles(res.data);
         } else {
